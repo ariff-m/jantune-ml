@@ -11,7 +11,5 @@ COPY . ./
 #install all required package 
 RUN pip install -r requirements.txt
 
-EXPOSE 5000
-
 #Run web service using gunicorn
-CMD exec gunicorn -b-bind :5000 --workers 1 --threads 8 --timeout 0 app:app
+CMD exec gunicorn -b 0.0.0.0:8080 --workers 1 --threads 8 --timeout 0 app:app
