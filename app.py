@@ -12,10 +12,10 @@ with open("labels.txt", "r") as file:
 
 # Configure MySQL connection to express database
 db = mysql.connector.connect(
-    host="34.128.71.84",
-    user="root",
-    password="1234",
-    database="express"
+    host="YOUR_DB_HOST",
+    user="YOUR_DB_USER",
+    password="YOUR_DB_PASSWORD",
+    database="YOUR_DB_NAME"
 )
 cursor = db.cursor()
 
